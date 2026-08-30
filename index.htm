@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alessandro Campanella | Books & Links</title>
+  <title>Alessandro Campanella | Author & Writer</title>
   <style>
     * {
       box-sizing: border-box;
@@ -31,41 +31,130 @@
     p.bio {
       font-size: 0.95rem;
       color: #64748b;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94a3b8;
+      text-align: left;
+      margin: 24px 0 10px 4px;
     }
     .links {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
-    .card-wrapper {
+    
+    /* FEATURED CHILDREN'S BOOK CARD */
+    .featured-wrapper {
       background: #ffffff;
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      border-radius: 16px;
+      border: 2px solid #3b82f6;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
       overflow: hidden;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
+      position: relative;
     }
-    .card-wrapper:hover {
+    .featured-wrapper:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+    }
+    .badge {
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 12px;
+      display: inline-block;
+      border-bottom-right-radius: 8px;
+      text-align: left;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .featured-main {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 24px 18px 18px 18px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .featured-cover {
+      width: 80px;
+      height: 112px;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+      flex-shrink: 0;
+    }
+    .featured-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .featured-subtitle {
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    /* STANDARD CARDS */
+    .simple-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #ffffff;
+      padding: 14px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .simple-card:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
       border-color: #cbd5e1;
     }
-    .card-main {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 16px;
-      text-decoration: none;
-      color: inherit;
-    }
-    .book-cover {
-      width: 65px;
-      height: 90px;
-      border-radius: 6px;
+    .project-thumb {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
       object-fit: cover;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
       flex-shrink: 0;
+    }
+    .buy-options {
+      display: flex;
+      gap: 8px;
+      padding: 12px 18px;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    .buy-button {
+      flex: 1;
+      display: inline-block;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #2563eb;
+      text-decoration: none;
+      padding: 8px;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      transition: background 0.15s ease;
+    }
+    .buy-button:hover {
+      background: #eff6ff;
+      border-color: #93c5fd;
     }
     .card-info {
       text-align: left;
@@ -75,37 +164,17 @@
       font-size: 1.05rem;
       font-weight: 600;
       color: #0f172a;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     .card-subtitle {
       font-size: 0.85rem;
       color: #64748b;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
-    .buy-options {
-      display: flex;
-      gap: 8px;
-      padding: 10px 16px;
-      background: #f8fafc;
-      border-top: 1px solid #f1f5f9;
-    }
-    .buy-button {
-      flex: 1;
-      display: inline-block;
-      text-align: center;
+    .read-tag {
       font-size: 0.78rem;
       font-weight: 600;
       color: #2563eb;
-      text-decoration: none;
-      padding: 6px 8px;
-      border-radius: 6px;
-      background: #ffffff;
-      border: 1px solid #cbd5e1;
-      transition: background 0.15s ease;
-    }
-    .buy-button:hover {
-      background: #eff6ff;
-      border-color: #93c5fd;
     }
   </style>
 </head>
@@ -113,17 +182,18 @@
 
   <div class="container">
     <h1>Alessandro Campanella</h1>
-    <p class="bio">Author | Explore my published children's books below</p>
+    <p class="bio">Author & Writer</p>
 
+    <!-- Section 1: Children's Books -->
+    <div class="section-title">Children's Books</div>
     <div class="links">
-
-      <!-- Book: Mattheus, The Only Child -->
-      <div class="card-wrapper">
-        <a href="https://www.amazon.ca/Mattheus-Only-Child-Alessandro-Campanella/dp/1067795510" target="_blank" rel="noopener noreferrer" class="card-main">
-          <img src="mattheustheonlychildcover.png" alt="Mattheus, The Only Child Cover" class="book-cover">
+      <div class="featured-wrapper">
+        <div class="badge">Featured Release</div>
+        <a href="https://www.amazon.ca/Mattheus-Only-Child-Alessandro-Campanella/dp/1067795510" target="_blank" rel="noopener noreferrer" class="featured-main">
+          <img src="mattheustheonlychildcover.png" alt="Mattheus, The Only Child Cover" class="featured-cover">
           <div class="card-info">
-            <div class="card-title">Mattheus, The Only Child</div>
-            <div class="card-subtitle">Paperback & Hardcover</div>
+            <div class="featured-title">Mattheus, The Only Child</div>
+            <div class="featured-subtitle">Paperback & Hardcover</div>
           </div>
         </a>
         <div class="buy-options">
@@ -131,8 +201,43 @@
           <a href="https://www.amazon.com/dp/1067795502?lv=shuf&channelId=500&plpRedirect=mhFallback" target="_blank" rel="noopener noreferrer" class="buy-button">🇺🇸 Amazon US</a>
         </div>
       </div>
-
     </div>
+
+    <!-- Section 2: Screenwriting & Comics -->
+    <div class="section-title">Screenwriting & Comics</div>
+    <div class="links">
+      <a href="https://www.youtube.com/watch?v=y3DmZEkYvxQ" target="_blank" rel="noopener noreferrer" class="simple-card">
+        <img src="zackintimecover.jpg" alt="Zack In Time Cover" class="project-thumb">
+        <div class="card-info">
+          <div class="card-title">Zack In Time - Pilot Episode</div>
+          <div class="card-subtitle">2D Animated Series (Staff Writer)</div>
+          <div class="read-tag">Watch Pilot &rarr;</div>
+        </div>
+      </a>
+
+      <a href="https://globalcomix.com/c/three-2" target="_blank" rel="noopener noreferrer" class="simple-card">
+        <img src="threecomic.jpg" alt="THREE Comic Cover" class="project-thumb">
+        <div class="card-info">
+          <div class="card-title">THREE</div>
+          <div class="card-subtitle">Original Comic Book Series</div>
+          <div class="read-tag">Read on GlobalComix &rarr;</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Section 3: Mathematics & Research -->
+    <div class="section-title">Mathematics & Research</div>
+    <div class="links">
+      <a href="https://spectrum.library.concordia.ca/id/eprint/996063/" target="_blank" rel="noopener noreferrer" class="simple-card">
+        <img src="ellipticcurve.png" alt="Elliptic Curve Thumbnail" class="project-thumb">
+        <div class="card-info">
+          <div class="card-title">Master's Thesis in Mathematics</div>
+          <div class="card-subtitle">Concordia University Library</div>
+          <div class="read-tag">Read Thesis &rarr;</div>
+        </div>
+      </a>
+    </div>
+
   </div>
 
 </body>
