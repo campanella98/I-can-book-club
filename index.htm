@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alessandro Campanella | Books & Links</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+    .container {
+      width: 100%;
+      max-width: 460px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    p.bio {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 28px;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card-wrapper {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .card-wrapper:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      border-color: #cbd5e1;
+    }
+    .card-main {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .book-cover {
+      width: 65px;
+      height: 90px;
+      border-radius: 6px;
+      object-fit: cover;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      flex-shrink: 0;
+    }
+    .card-info {
+      text-align: left;
+      flex: 1;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .card-subtitle {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+    .buy-options {
+      display: flex;
+      gap: 8px;
+      padding: 10px 16px;
+      background: #f8fafc;
+      border-top: 1px solid #f1f5f9;
+    }
+    .buy-button {
+      flex: 1;
+      display: inline-block;
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #2563eb;
+      text-decoration: none;
+      padding: 6px 8px;
+      border-radius: 6px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      transition: background 0.15s ease;
+    }
+    .buy-button:hover {
+      background: #eff6ff;
+      border-color: #93c5fd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Alessandro Campanella</h1>
+    <p class="bio">Author | Explore my published children's books below</p>
+
+    <div class="links">
+
+      <!-- Book: Mattheus, The Only Child -->
+      <div class="card-wrapper">
+        <a href="https://www.amazon.ca/Mattheus-Only-Child-Alessandro-Campanella/dp/1067795510" target="_blank" rel="noopener noreferrer" class="card-main">
+          <img src="mattheustheonlychildcover.png" alt="Mattheus, The Only Child Cover" class="book-cover">
+          <div class="card-info">
+            <div class="card-title">Mattheus, The Only Child</div>
+            <div class="card-subtitle">Paperback & Hardcover</div>
+          </div>
+        </a>
+        <div class="buy-options">
+          <a href="https://www.amazon.ca/Mattheus-Only-Child-Alessandro-Campanella/dp/1067795510" target="_blank" rel="noopener noreferrer" class="buy-button">🇨🇦 Amazon Canada</a>
+          <a href="https://www.amazon.com/dp/1067795502?lv=shuf&channelId=500&plpRedirect=mhFallback" target="_blank" rel="noopener noreferrer" class="buy-button">🇺🇸 Amazon US</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
